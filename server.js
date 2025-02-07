@@ -10,13 +10,13 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-// MySQL Connection
 const db = mysql.createConnection({
-  host: 'localhost',  // Use localhost if you're running MySQL locally
-  user: 'root',       // MySQL username
-  password: '',       // MySQL password
-  database: 'user_data' // The database you created earlier
+  host: 'localhost',  
+  user: 'root',       
+  password: 'loki',   // Use the correct password
+  database: 'user_data'
 });
+
 
 db.connect((err) => {
   if (err) {
